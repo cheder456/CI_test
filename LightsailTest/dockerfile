@@ -1,0 +1,11 @@
+FROM python:3.9
+WORKDIR /
+
+COPY requirements.txt ./requirements.txt
+COPY flask_endpoints.py ./flask_endpoints.py
+COPY save_files.py ./save_files.py
+COPY test_flask_endpoints.py ./test_flask_endpoints.py
+
+RUN pip install -r requirements.txt
+
+CMD [ "python", "./flask_endpoints.py"]

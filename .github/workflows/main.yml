@@ -26,7 +26,7 @@ jobs:
       working-directory: ./
       id: compose
       run: |
-        docker-compose -f "docker-compose.yml" up
+        docker-compose -f "docker-compose.yml" up --exit-code-from test
         echo $?
 
     - name: Stop containers

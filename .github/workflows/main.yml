@@ -25,11 +25,9 @@ jobs:
     - name: Start containers
       working-directory: ./
       id: compose
-      run: docker-compose -f "docker-compose.yml" up 
-      
-    - name: Output of compose
-      working-directory: ./
-      run: echo "The code was ${{ steps.compose.errorcode }}"
+      run: |
+        docker-compose -f "docker-compose.yml" up
+        echo $?
 
     - name: Stop containers
       working-directory: ./

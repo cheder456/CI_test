@@ -25,6 +25,7 @@ jobs:
     - name: Start containers
       working-directory: ./
       run: docker-compose -f "docker-compose.yml" up 
+      fail-on-error: true
 
     - name: Stop containers
       working-directory: ./

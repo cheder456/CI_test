@@ -24,7 +24,7 @@ jobs:
 
     - name: Start containers
       working-directory: ./
-      run: docker-compose -f "docker-compose.yml" up -d --build
+      run: docker-compose -f "docker-compose.yml" up 
 
     - name: Stop containers
       working-directory: ./

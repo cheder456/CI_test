@@ -29,7 +29,7 @@ jobs:
       
     - name: Output of compose
       working-directory: ./
-      run: echo "The time was ${{ steps.compose.outputs.data }}"
+      run: echo "The code was ${{ steps.compose.errorcode }}"
 
     - name: Stop containers
       working-directory: ./

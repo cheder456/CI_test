@@ -20,5 +20,7 @@ class TestSaveFiles(unittest.TestCase):
 
 if __name__ == '__main__':
     # begin the unittest.main()
-    unittest.main()
-    sys.exit(1)
+    unittest.main(exit=False)
+    if len(unittest.TestResult.failures) > 0:
+        sys.exit(1)
+

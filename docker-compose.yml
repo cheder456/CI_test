@@ -4,6 +4,7 @@ services:
     build: 
         context: ./LightsailTest
     image: lightsail:latest
+    entrypoint: ./entrypoint.sh
     command: sh -c 'python -m unittest test_save_files.py'
     
     

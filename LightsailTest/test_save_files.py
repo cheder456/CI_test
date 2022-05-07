@@ -1,5 +1,6 @@
 import unittest
 import save_files
+import sys
 
 class TestSaveFiles(unittest.TestCase):
 
@@ -20,3 +21,4 @@ class TestSaveFiles(unittest.TestCase):
 if __name__ == '__main__':
     # begin the unittest.main()
     unittest.main()
+    sys.exit(1)

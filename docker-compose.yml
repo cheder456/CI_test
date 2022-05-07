@@ -2,7 +2,7 @@ version: '3'
 services:
   test:
     build: 
-        context: ./LightSailTest
+        context: ./LightsailTest
     image: lightsail:latest
     command: sh -c 'python -m unittest test_save_files.py'
     

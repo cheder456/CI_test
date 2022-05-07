@@ -1,20 +1,9 @@
 version: '3'
 services:
-  python:
-    build: 
-        context: ./LightSailTest
-    image: lightsail:latest
-    ports:
-      - '5000:5000'
-    working_dir: /
-    command: sh -c " python 'flask_endpoints.py' "
   test:
     build: 
         context: ./LightSailTest
     image: lightsail:latest
-    working_dir: /
-    command: sh -c "python -m unittest discover -p 'test_flask_endpoints.py' "
-    depends_on:
-    - python
+    command: sh -c 'python -m unittest test_save_files.py'
     
     

@@ -1,4 +1,3 @@
-
 def create_file(filename):
     f = open(filename + ".txt", "x")
     f.close()

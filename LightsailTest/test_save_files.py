@@ -14,13 +14,11 @@ class TestSaveFiles(unittest.TestCase):
         filename = "sugar"
         actual = save_files.read_file(filename)
         content = ""
-        theoretical = {'cfpgiopfontent': content}
+        theoretical = {'content': content}
         self.assertEqual(actual, theoretical)
 
 
 if __name__ == '__main__':
     # begin the unittest.main()
-    unittest.main(exit=False)
-    if len(unittest.TestResult.failures) > 0:
-        sys.exit(1)
+    unittest.main(exit=True)
 

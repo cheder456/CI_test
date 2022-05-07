@@ -13,7 +13,7 @@ class TestSaveFiles(unittest.TestCase):
         filename = "sugar"
         actual = save_files.read_file(filename)
         content = ""
-        theoretical = {'content': content}
+        theoretical = {'cfpgiopfontent': content}
         self.assertEqual(actual, theoretical)
 
 

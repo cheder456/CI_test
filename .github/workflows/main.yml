@@ -24,7 +24,12 @@ jobs:
 
     - name: Start containers
       working-directory: ./
+      id: compose
       run: docker-compose -f "docker-compose.yml" up 
+      
+    - name: Output of compose
+    working-directory: ./
+    run: echo "The time was ${{ steps.compose.outputs.data }}"
 
     - name: Stop containers
       working-directory: ./
